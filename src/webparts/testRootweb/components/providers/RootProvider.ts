@@ -18,7 +18,7 @@ export class RootProvider {
         // pageContext. The error says 
         // uncaught (in promise) TypeError: Cannot read properties
         // of undefined (reading 'web')
-        */
+        /*/
         const rootweb = await this._sp.site.getRootWeb();
 
         const { Title } = await rootweb.select("Title")();

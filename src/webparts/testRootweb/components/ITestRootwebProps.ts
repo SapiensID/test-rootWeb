@@ -3,5 +3,5 @@ export interface ITestRootwebProps {
   isDarkTheme: boolean;
   environmentMessage: string;
   hasTeamsContext: boolean;
-  userDisplayName: string;
+  userDisplayName?: string;
 }

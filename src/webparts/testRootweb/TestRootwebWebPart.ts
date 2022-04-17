@@ -85,7 +85,7 @@ export default class TestRootwebWebPart extends BaseClientSideWebPart<ITestRootw
               groupName: "Link href",
               groupFields: [
                 PropertyPaneTextField('description', {
-                  label: "Link href"
+                  label: "Link href to another modern page in site"
                 })
               ]
             }
