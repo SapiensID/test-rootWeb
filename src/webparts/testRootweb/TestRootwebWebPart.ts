@@ -11,7 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'TestRootwebWebPartStrings';
 import TestRootweb from './components/TestRootweb';
 import { ITestRootwebProps } from './components/ITestRootwebProps';
-import { getSP } from './pnpjsConfig';
+import { getSP, disposeSP } from './pnpjsConfig';
 
 export interface ITestRootwebWebPartProps {
   description: string;
@@ -69,6 +69,9 @@ export default class TestRootwebWebPart extends BaseClientSideWebPart<ITestRootw
   }
 
   protected onDispose(): void {
+    // to deal with partial page repaint in modern pages, dispose of sp config, as suggested
+    // here https://github.com/pnp/pnpjs/issues/2221#issuecomment-1100934107
+    disposeSP();
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 

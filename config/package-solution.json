@@ -3,7 +3,7 @@
   "solution": {
     "name": "Test rootWeb",
     "id": "95985f1a-9592-4056-9054-b67cb9c2d8ab",
-    "version": "1.0.0.0",
+    "version": "1.0.0.3",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
